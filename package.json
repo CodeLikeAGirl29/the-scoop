@@ -1,6 +1,10 @@
 {
 	"name": "build-apis-project-3-scoop",
 	"version": "0.1.0",
+	"engines": {
+		"node": "16.x",
+		"npm": "8.x"
+	},
 	"private": true,
 	"dependencies": {
 		"chai": "^4.1.1",
@@ -25,7 +29,7 @@
 	"scripts": {
 		"test": "mocha",
 		"start": "node server.js",
-		"build": "npm install && npm run build",
+		"build": "webpack",
 		"postinstall": "npm run webpack",
 		"webpack": "webpack"
 	}
