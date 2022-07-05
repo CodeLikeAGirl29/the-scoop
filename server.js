@@ -488,6 +488,11 @@ if (typeof loadDatabase === "function" && !isTestMode) {
 	}
 }
 
+// using my heroku/postgreSQL db url
+const DB_URL =
+	process.env.DATABASE_URL ||
+	"postgres://kmcxpoaswihibx:08508a555149e700d4599f6356ef54e3ee8213ffe35f09bee012f58dae45553d@ec2-52-204-195-41.compute-1.amazonaws.com:5432/dc8frt3n9b8m6c";
+
 const server = http.createServer(requestHandler);
 
 server.listen(port, (err) => {
